@@ -208,7 +208,7 @@ dc: docker-compose.yml
 	  -v /var/run/docker.sock:/var/run/docker.sock \
 	  -v $$PWD:$$PWD -w $$PWD \
 	  docker/compose:$(DC_VER) \
-	  -p $$DCAPE_TAG --env-file $(CFG) \
+	  -p $$DCAPE_TAG --env-file $(PWD)/$(CFG) \
 	  $(CMD)
 
 # ------------------------------------------------------------------------------
